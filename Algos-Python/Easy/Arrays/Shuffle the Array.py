@@ -6,6 +6,8 @@
 # Input: nums = [2,5,1,3,4,7], n = 3
 # Output: [2,3,5,4,1,7] 
 # Explanation: Since x1=2, x2=5, x3=1, y1=3, y2=4, y3=7 then the answer is [2,3,5,4,1,7].
+# Runtime: 44 ms, faster than 74.11% of Python online submissions for Shuffle the Array.
+# Memory Usage: 13.6 MB, less than 40.21% of Python online submissions for Shuffle the 
         list = []
         for k in range(len(nums)):
             index = k
@@ -17,4 +19,10 @@
         return list
 
 
+#Additional
+        temp = []
+        for i in range(n):
+            temp.append(nums[i])
+            temp.append(nums[n+i])
+        return temp
 # https://leetcode.com/problems/shuffle-the-array
